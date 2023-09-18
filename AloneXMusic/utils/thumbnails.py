@@ -86,12 +86,17 @@ async def get_thumb(videoid):
                     )
                     await f.write(await resp.read())
                     await f.close()
+        """
         try:
             spa=await app.get_profile_photos(app.id)
             sp= await app.download_media(spa[0]['file_id'],file_name=f'{app.id}.jpg')
         except:
             aaa= await app.get_profile_photos(app.id)
             sp=await app.download_media(aaa[0]['file_id'],file_name=f'{app.id}.jpg')
+        """
+        spa=await app.get_chat(app.id)
+        spb=spa.photo.big_file_id
+        sp=await app.download_media(spb,file_name=f'{app.id}.jpg')
         xp=Image.open(sp)
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
