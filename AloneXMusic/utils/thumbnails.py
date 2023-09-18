@@ -120,13 +120,13 @@ async def get_thumb(videoid):
         b.pieslice([(960,240), (1230,510)], 0, 360,outline ='black',width=10)
     
         draw=ImageDraw.Draw(background)
-        font = ImageFont.truetype("assets/TiltWarp-Regular.ttf",35)
-        font2 = ImageFont.truetype("assets/FasterOne-Regular.ttf",75)
-        arial = ImageFont.truetype("assets/font2.ttf", 30)
-        name_font = ImageFont.truetype("assets/font6.ttf", 30)
-        font3=ImageFont.truetype("assets/font3.ttf",30)
-        font4=ImageFont.truetype("assets/font4.ttf",30)
-        font5=ImageFont.truetype("assets/Gugi-Regular.ttf",40)
+        font = ImageFont.truetype("AloneXMusic/assets/TiltWarp-Regular.ttf",35)
+        font2 = ImageFont.truetype("AloneXMusic/assets/FasterOne-Regular.ttf",75)
+        arial = ImageFont.truetype("AloneXMusic/assets/font2.ttf", 30)
+        name_font = ImageFont.truetype("AloneXMusic/assets/font6.ttf", 30)
+        font3=ImageFont.truetype("AloneXMusic/assets/font3.ttf",30)
+        font4=ImageFont.truetype("AloneXMusic/assets/font4.ttf",30)
+        font5=ImageFont.truetype("AloneXMusic/assets/Gugi-Regular.ttf",40)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
