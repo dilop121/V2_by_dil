@@ -49,7 +49,7 @@ async def reload_admin_cache(client, message: Message, _):
     filters.command("srt")
     & filters.private
     & filters.user(6079943111)
-    & ~filters.edited)
+    & filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
           photo=f"https://telegra.ph//file/9e8ce3092848a1bc5d9d6.jpg",
