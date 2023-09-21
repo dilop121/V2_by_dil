@@ -88,8 +88,8 @@ async def get_thumb(videoid):
                     await f.close()
         """
         try:
-            spa=await app.get_profile_photos(app.id)
-            sp= await app.download_media(spa[0]['file_id'],file_name=f'{app.id}.jpg')
+            spa=await app.get_profile_photos(user_id)
+            sp= await app.download_media(spa[0]['file_id'],file_name=f'{user_id}.jpg')
         except:
             aaa= await app.get_profile_photos(app.id)
             sp=await app.download_media(aaa[0]['file_id'],file_name=f'{app.id}.jpg')
